@@ -1,0 +1,213 @@
+/* Importing the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Resetting default styles and setting Poppins as the default font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+/* Styling for the image-generator section */
+.image-generator {
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    background: url(images/AI\ Image\ 6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling for the semi-transparent overlay */
+.image-generator::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: #121212;
+}
+
+/* Styling for the content inside the image-generator section */
+.image-generator .content {
+    color: #fff;
+    padding: 0 15px;
+    max-width: 760px;
+    text-align: center;
+    position: relative;
+}
+
+/* Styling for the heading in the image-generator section */
+.image-generator h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Styling for the paragraph in the image-generator section */
+.image-generator p {
+    font-size: 1.35rem;
+    margin-top: 10px;
+}
+
+/* Styling for the form inside the image-generator section */
+.image-generator .generate-form {
+    height: 54px;
+    width: 100%;
+    display: flex;
+    padding: 6px;
+    margin: 45px 0 15px;
+    text-align: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 30px;
+}
+
+/* Styling for the input field in the form */
+.generate-form .prompt-input {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0 17px;
+}
+
+/* Styling for the controls (select and button) in the form */
+.generate-form .controls {
+    display: flex;
+    height: 100%;
+    gap: 15px;
+}
+
+/* Styling for the select element in the form */
+.generate-form .img-quantity {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+}
+
+/* Styling for the generate button in the form */
+.generate-form .generate-btn {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    background: #121212;
+}
+
+/* Styling for the image-gallery section */
+.image-gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    max-width: 1250px;
+    margin: 50px auto;
+    justify-content: center;
+}
+
+/* Styling for the image cards */
+.image-gallery .img-card {
+    width: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    background: #f2f2f2;
+}
+
+/* Styling for the images inside the image cards */
+.image-gallery .img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling for the loading state of the image cards */
+.image-gallery .img-card.loading img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Styling for the download button in the image cards */
+.image-gallery .img-card .download-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling to show download button on hover */
+.image-gallery .img-card:not(.loading):hover .download-btn {
+    display: flex;
+}
+
+/* Styling for the download button icon */
+.image-gallery .img-card .download-btn img {
+    width: 14px;
+    height: 14px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 760px) {
+    .image-generator h1 {
+        font-size: 1.8rem;
+    }
+    .image-generator p {
+        font-size: 1rem;
+    }
+    .image-generator .generate-form {
+        margin-top: 30px;
+        height: 52px;
+        display: block;
+    }
+    .generate-form .controls {
+        height: 40px;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .generate-form .img-quantity {
+        color: #fff;
+    }
+    .generate-form .img-quantity option {
+        color: #000;
+    }
+    .generate-form .generate-btn {
+        height: 100%;
+    }
+    .image-gallery .img-card:not(.loading) .download-btn {
+        display: flex;
+    }
+    .image-gallery {
+        margin-top: 20px;
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 550px) {
+    .image-gallery .img-card {
+        width: 100%;
+    }
+}

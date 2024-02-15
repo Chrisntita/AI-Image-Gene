@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>AI Image Generator</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Defer loading of script for optimization -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Section for the image generator -->
+    <section class="image-generator">
+        <div class="content">
+            <!-- Heading of the section -->
+            <h1>AI Image Generator</h1>
+            <!-- Description of the tool -->
+            <p>Convert your text into an image within seconds using this
+                JavaScript-powered AI Image Generator Tool.
+            </p>
+            <!-- Form for user input -->
+            <form action="#" class="generate-form">
+                <!-- Input field for user prompt -->
+                <input type="text" class="prompt-input" placeholder="Describe what you want to see" required>
+                <!-- Controls for selecting number of images to generate -->
+                <div class="controls">
+                    <select class="img-quantity">
+                        <option value="1">1 Image</option>
+                        <option value="2">2 Images</option>
+                        <option value="3">3 Images</option>
+                        <option value="4" selected>4 Images</option>
+                    </select>
+                    <!-- Button to trigger image generation -->
+                    <button type="submit" class="generate-btn">Generate</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Section for displaying generated images -->
+    <section class="image-gallery">
+        <!-- Image cards container -->
+        <div class="img-card">
+            <!-- Placeholder image for AI Image 1 -->
+            <img src="images/AI Image 1.jpg" alt="image">
+        </div>
+        <div class="img-card">
+            <!-- Placeholder image for AI Image 2 -->
+            <img src="images/AI Image 2.jpg" alt="image">
+        </div>
+        <div class="img-card">
+            <!-- Placeholder image for AI Image 3 -->
+            <img src="images/AI Image 3.jpg" alt="image">
+        </div>
+        <div class="img-card">
+            <!-- Placeholder image for AI Image 4 -->
+            <img src="images/AI Image 4.jpg" alt="image">
+        </div>
+    </section> 
+</body>
+</html>
